@@ -19,7 +19,7 @@ CREATE TABLE task_assignments (
     user_id INT
 );
 
---Задание 3--  -- ← ПЕРЕМЕСТИТЬ РАНЬШЕ ВСТАВКИ ДАННЫХ
+--Задание 3--  
 --3.1--
 ALTER TABLE task_assignments 
 ADD FOREIGN KEY (task_id) REFERENCES tasks(id);
@@ -80,4 +80,5 @@ SET status = 'Выполнена'
 WHERE id = 1;
 --6.3--
 DELETE FROM task_assignments WHERE task_id = 2;
+
 DELETE FROM tasks WHERE id = 2;
